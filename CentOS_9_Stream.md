@@ -1,8 +1,6 @@
-#CentOs 9 Stream
+# CentOs 9 Stream
 
-##Network configuration
+## Network configuration
 
 Display devices
-´´´
-nmcli device
-´´´
+´´´ nmcli device ´´´
