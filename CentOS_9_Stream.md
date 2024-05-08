@@ -70,8 +70,8 @@ timeout=1000
 EOF
 ```
 
-## Add ca to base os
-Copy your scripts to
+## Add CA to base os
+Copy your certs to
 > /etc/pki/ca-trust/source/anchors/
 
 Update Certs
