@@ -79,7 +79,21 @@ Update Certs
 update-ca-trust extract
 ```
 
+## Automatic updates
+Install needed package
+```
+dnf install dnf-automatic
+```
 
+If you want to download packages only you doesnt change anything. If you want to use a real automatic update
+you must change these line
+> apply_updates = no
+to yes
+in
+> /etc/dnf/automatic.conf
 
+```
+sed -i "s/^apply_updates*./c\apply_updates = yes" /etc/dnf/automatic.conf
+```
 
 
