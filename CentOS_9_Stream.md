@@ -93,7 +93,7 @@ in
 > /etc/dnf/automatic.conf
 
 ```
-sed -i "s/^apply_updates*./c\apply_updates = yes" /etc/dnf/automatic.conf
+sed -i "/^apply_updates*./c\apply_updates = yes" /etc/dnf/automatic.conf
 ```
 
 
