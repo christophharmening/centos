@@ -53,6 +53,32 @@ grubby --update-kernel ALL --args ipv6.disable=1
 grubby --update-kernel ALL --remove-args ipv6.disable
 ```
 
+## Configure dnf
+Set fastest mirror
+```
+echo "fastestmirror=1" >> /etc/dnf/dnf.conf
+```
+
+Set proxy for dnf
+```
+cat << EOF >> /etc/dnf/dnf.conf
+proxy=http://PROXY:PORT/
+proxy_username=PROXYUSER
+proxy=password=PROXYPASS
+minrate=1
+timeout=1000
+EOF
+```
+
+## Add ca to base os
+Copy your scripts to
+> /etc/pki/ca-trust/source/anchors/
+
+Update Certs
+```
+update-ca-trust extract
+```
+
 
 
 
